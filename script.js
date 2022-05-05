@@ -22,4 +22,5 @@ function getDados(){
   document.getElementById("texto2").innerHTML = `Eu, ${empregadoInput.value} declaro para todos os efeitos, ter recebido a título de ${aTituloInput.value}, a importância de: R$${valorInput.value},00 reais, e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo valor será descontado, pelo empregador: ${empregadorInput.value}, de CPF/CNPJ Nº ${cpfCNPJInput.value}, do pagamento da minha remuneração mensal relativa à folha do mês de ${remuneracaoMensalInput.value}.`;
   document.getElementById("valorPago").innerHTML = `R$ ${valorInput.value},00 #`;
   document.getElementById("dataImpressao").innerHTML = `${cidadeInput.value}  -  ${dataInput.value}`;
+  
 }
