@@ -7,6 +7,9 @@ function voltar(){
   var divReciboTudo = document.getElementById("container").style.display = "block";
   var divReciboImprimido = document.getElementById("reciboImprimir").style.display = "none";
 }
+function imprimir(){
+  window.print();
+}
 
 function getDados(){
   var valor = document.getElementById("valorInput");
@@ -19,8 +22,38 @@ function getDados(){
   var formasPagamento = document.getElementsByClassName("radio");
   var remuneracaoMensal = document.getElementById("remuneracaoMensalInput");
 
-  document.getElementById("texto2").innerHTML = `Eu, ${empregadoInput.value} declaro para todos os efeitos, ter recebido a título de ${aTituloInput.value}, a importância de: R$${valorInput.value},00 reais, e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo valor será descontado, pelo empregador: ${empregadorInput.value}, de CPF/CNPJ Nº ${cpfCNPJInput.value}, do pagamento da minha remuneração mensal relativa à folha do mês de ${remuneracaoMensalInput.value}.`;
+
   document.getElementById("valorPago").innerHTML = `R$ ${valorInput.value},00 #`;
   document.getElementById("dataImpressao").innerHTML = `${cidadeInput.value}  -  ${dataInput.value}`;
   
 }
+/**
+    <div id="reciboImprimir">
+        <div id="button">
+            <p>
+                <input type="hidden" name="gerarRecibo">
+                <button type="submit" class="submit" onclick="voltar()">
+                    <span>Voltar</span>
+                </button>
+            </p>
+        <div id="reciboPraImprimir" class="bordaRecibo">
+            <h1>Recibo Salarial</h1>
+            <div>
+                <label class="aoLado" id="primeiraVia">
+                    <h3>1º Via</h3>
+                </label>
+                <label id="valorLabel"><b class="aoLado" id="valorPago"></b></label>
+            </div>
+            <div>
+                <p id="texto2" class="texto"></p>
+                <p id="texto3" class="texto">Incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.</p>
+                <br>
+                <p id="texto4" class="texto">Ass:</p>
+                <p id="texto5" class="texto"> ―――――――――――――――――――― </p>
+            </div>
+            <div>
+                <p id="dataImpressao"></p>
+            </div>
+        </div>
+    </div>
+              **/
