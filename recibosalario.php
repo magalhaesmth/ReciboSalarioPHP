@@ -11,7 +11,6 @@
 <body class=box>
   
   <?php
-  $nomeCredor = $_POST['nomeDoCredor'];
   $valor = $_POST("valorInput");
   $empregado = $_POST("empregadoInput");
   $aTitulo = $_POST("aTituloInput");
