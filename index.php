@@ -13,6 +13,7 @@
   <div id="container" class="bordaRecibo">
     <h1 id ="tituloRecibo">Gerador de Recibo Salarial</h1>
         <h2><p>Preencha o recibo corretamente para a emissão do recibo salarial.</p></h2>
+        <form action="recibosalario.php" method="post">
         <div id = "conteudoRecibo">
             <div id="valor">
                 <h3>Valor:</h3>
@@ -85,34 +86,5 @@
             </div>
        </div>  
     </div>
-    <div id="reciboImprimir">
-        <div id="button">
-            <p>
-                <input type="hidden" name="gerarRecibo">
-                <button type="submit" class="submit" onclick="voltar()">
-                    <span>Voltar</span>
-                </button>
-            </p>
-        <div id="reciboPraImprimir" class="bordaRecibo">
-            <h1>Recibo Salarial</h1>
-            <div>
-                <label class="aoLado" id="primeiraVia">
-                    <h3>1º Via</h3>
-                </label>
-                <label id="valorLabel"><b class="aoLado" id="valorPago"></b></label>
-            </div>
-            <div>
-                <p id="texto2" class="texto"></p>
-                <p id="texto3" class="texto">Incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.</p>
-                <br>
-                <p id="texto4" class="texto">Ass:</p>
-                <p id="texto5" class="texto"> ―――――――――――――――――――― </p>
-            </div>
-            <div>
-                <p id="dataImpressao"></p>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
