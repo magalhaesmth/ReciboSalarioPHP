@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="./style.css">
 
-<body>
+<body class=box>
   
   <?php
   $nomeCredor = $_POST['nomeDoCredor'];
@@ -22,5 +22,16 @@
   $formasPagamento = $_POST("radio");
   $remuneracaoMensal = $_POST("remuneracaoMensalInput");
 
+  $variaveis='
+  <p>"Eu, <b> '.$empregado' </b> declaro para todos os efeitos, ter recebido a título de <b> '.$aTitulo' </b>, a importância de: <b> R$'.$valor',00 </b>, e em concordância com o disposto no <b> Art. 462, da CLT </b>, tenho plena consciência de que o respectivo valor será descontado, pelo empregador: <b> '.$empregador' </b>, de CPF/CNPJ <b> Nº '.$cpfCnpj' </b>, do pagamento da minha remuneração mensal relativa à folha do mês de <b>'.$remuneracaoMensal</b><p>.;
+
+echo "$variaveis";
 
 ?>
+  <div style="padding-left:300px" ;>
+   <input type="hidden" name="gerarRecibo">
+   <button type="submit" class="submit" onclick="imprimir()">
+  </div>
+   
+</body>
+</html>
