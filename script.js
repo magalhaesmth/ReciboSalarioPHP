@@ -7,10 +7,7 @@ function voltar(){
   var divReciboTudo = document.getElementById("container").style.display = "block";
   var divReciboImprimido = document.getElementById("reciboImprimir").style.display = "none";
 }
-function imprimir(){
-  window.print();
-}
-
+/**
 function getDados(){
   var valor = document.getElementById("valorInput");
   var empregado = document.getElementById("empregadoInput");
@@ -27,7 +24,7 @@ function getDados(){
   document.getElementById("dataImpressao").innerHTML = `${cidadeInput.value}  -  ${dataInput.value}`;
   
 }
-/**
+
     <div id="reciboImprimir">
         <div id="button">
             <p>
@@ -56,4 +53,37 @@ function getDados(){
             </div>
         </div>
     </div>
+
+    ===============
+
+    <?php
+  $nomeCredor = $_POST['nomeDoCredor'];
+  $valor = $_POST("valorInput");
+  $empregado = $_POST("empregadoInput");
+  $aTitulo = $_POST("aTituloInput");
+  $empregador = $_POST("empregadorInput");
+  $cpfCnpj = $_POST("cpfCNPJInput");
+  $cidade = $_POST("cidadeInput");
+  $data = $_POST("dataInput");
+  $formasPagamento = $_POST("radio");
+  $remuneracaoMensal = $_POST("remuneracaoMensalInput");
+  ?>
+  <?php
+  $variaveis = '
+  Eu,' . $empregado . ' declaro para todos os efeitos, ter recebido a título de ' . $aTitulo . ',
+   a importância de: R$' . $valor . ',00, e em concordância com o disposto no <b> Art. 462, da CLT, 
+   tenho plena consciência de que o respectivo valor será descontado, pelo empregador: ' . $empregador . ', de CPF/CNPJ
+    Nº ' . $cpfCnpj . ', do pagamento da minha remuneração mensal relativa à folha do mês de' . $remuneracaoMensal;
+
+  echo "$variaveis"
+  ?>
+  <div style="padding-left:300px" ;>
+    <input type="hidden" name="gerarRecibo">
+    <button type="submit" class="submit" onclick="imprimir()">
+  </div>
+
+</body>
+
+</html>
+ 
               **/
